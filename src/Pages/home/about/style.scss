@@ -1,0 +1,73 @@
+@import '../../../mixin.scss';
+.aboutSection{
+    // position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -80px;
+   
+  align-items: center; /* Vertically align items to the center */
+  
+      // height: 100vh; 
+    @include md{
+      display: flex;
+      flex-direction: row;
+      margin-top: 0px;
+        
+      }
+      .aboutText{
+        display: flex;
+        flex-direction: column;
+       
+       
+        height: auto;
+        width: 375px;
+        padding: 0px 30px;
+        h3{
+          font-size: 1.6rem;
+          line-height: 3rem;
+        }
+        p{
+          // display: none;
+          padding-top: 30px;
+          font-size: 1.3rem;
+          line-height: 2rem;
+        }
+        button{
+          border: 0px;
+          cursor: pointer;
+          background: none;
+          font-size: large;
+          font-weight: 600;
+          text-align: left;
+          margin-bottom: 20px;
+          &:hover{
+            color: var(--black);
+          }
+        
+         color: var(--Green);
+        }
+        color: var(--black);
+        @include md{
+       
+          width: 500px ;
+          
+            
+          }
+      }
+      .aboutImg{
+      width: 350px ;
+      
+      // transform: translate(20px,10px);
+      // transform: rotate(6.1rad);
+      @include md{
+       
+        width: 600px ;
+        
+          
+        }
+   
+      }
+      
+
+}

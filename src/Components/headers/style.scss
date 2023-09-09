@@ -1,0 +1,269 @@
+@import '../../mixin.scss';
+
+
+.header {
+    position: fixed;
+    transform: translateY(0);
+    width: 100%;
+    height: 80px;
+   
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    transition: all ease 0.5s;
+
+  .myBtn{
+    svg{
+        font-size: 24px;
+        color: aqua;
+    }
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    // background-color: red;
+    color: rgb(231, 0, 0);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+
+
+
+
+    &.top {
+        background: rgb(255, 255, 255);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+      
+    }
+    &.show {
+        // background-color: var(--black3);   
+        background-color: var(--Green);
+       
+    }
+    &.hide {
+        // transform: translateY(-60px);
+        // transform: translateX(00px);
+        // transform: translateY(-60px);
+        background-color: var(--Green);   
+
+    }
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        cursor: pointer;
+        img {
+            height: 50px;
+        }
+    }
+    .menuItems {
+        list-style-type: none;
+        display: none;
+        align-items: center;
+         color: black;
+          @include md {
+            display: flex;
+            justify-content: space-between;
+            // color: white;
+        }
+       
+     
+        
+    
+        
+        
+        .menuItem {
+            // height: 88px;
+            display: flex;
+            
+            align-items: center;
+            margin: 0 15px;
+           
+            color: black;
+
+            font-weight: 500;
+            position: relative;
+            &.hide {
+              
+                
+                color: var(--white); /* Text color when scrolled */
+              
+                &:hover{
+                   
+                    color: var(--white);
+                 
+                }
+        
+            }
+            &.show {
+              
+                
+                color: var(--white); /* Text color when scrolled */
+              
+                &:hover{
+                   
+                    color: var(--white);
+                 
+                }
+        
+            }
+            &.btn{
+                padding: 10px 30px;
+                border: solid 2px var(--Green);
+                &:hover {
+                    color: var(--white);
+                    background-color: var(--Green);
+                   
+                }
+            }
+           
+            &.btn{
+                padding: 10px 30px;
+                border: solid 2px var(--Green);
+                &.hide {
+                    border: solid 2px var(--white);
+                    
+                    color: var(--white); /* Text color when scrolled */
+                  
+                    &:hover{
+                       
+                        color: var(--Green);
+                        background-color: white;
+                    }
+            
+                }
+                &.show {
+              
+                    color: var(--white); /* Text color when scrolled */
+                    border: solid 2px var(--white);
+
+                   
+                }:hover
+                {
+                    color: var(--green);
+                    background-color: var(--white);
+                }
+            }
+           
+           
+           
+        
+            
+           
+           
+            svg {
+                font-size: 18px;
+            }
+            cursor: pointer;
+            &:hover {
+                color: var(--Green);
+            }
+        }
+    }
+
+    .mobileMenuItem {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        gap: 20px;
+        color: rgb(0, 0, 0);
+        @include md {
+            display: none;
+        }
+        &.show {
+              
+            color: var(--white); /* Text color when scrolled */
+   
+           
+        }
+       
+     
+    
+        &.hide {
+          
+            color: white;
+        
+    }
+        svg {
+            font-size: 25px;
+            font-weight: 600;
+         
+            // color: white;
+        }
+    }
+
+    &.mobileView {
+        background: var(--black3);
+        &.show {
+          
+            color: white;
+        
+    }
+    &.top {
+          
+        color: white;
+    
+}
+      
+
+        .menuItems {
+            display: flex;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background: var(--black3);
+            color: white;
+            flex-direction: row;
+            width: 100%;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: mobileMenu 0.3s ease forwards;
+            
+            .menuItem {
+                font-size: 20px;
+                width: 100%;
+                height: auto;
+                padding: 15px 20px;
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+               
+                &.top{
+          
+                    color: white;
+                
+            }
+                &:last-child {
+                    display: none;
+                }
+                &:first-child{
+                    display: none;
+                }
+            }
+        }
+    }
+
+ 
+}
+
+@keyframes mobileMenu {
+    0% {
+        transform: translateY(-130%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

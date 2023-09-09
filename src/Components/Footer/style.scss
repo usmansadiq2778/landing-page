@@ -1,0 +1,22 @@
+/* Footer.scss */
+@import '../../mixin.scss';
+.footer {
+    background-color: var(--Green);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    @include md{
+        display: none;
+    }
+  }
+  
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  

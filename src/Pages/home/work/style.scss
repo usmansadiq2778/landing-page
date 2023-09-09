@@ -1,0 +1,168 @@
+@import '../../../mixin.scss';
+.Work{
+    width: 100%;
+    height: 580px;
+    // margin-bottom: 20px;
+    background-color: var(__black);
+padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    // position: absolute;
+    @include md {
+        height: 550px;
+    }
+    .opacity-layer {
+        width: 100%;
+        height: 580px;
+        background-image: linear-gradient(
+            180deg,
+            rgba(4, 255, 67, 0.295) 0%,
+            #04152de0 79.17%
+        );
+        position: absolute;
+        bottom: 0px;
+   
+        @include md {
+            height: 550px;
+        }
+        left: 0px;
+    }
+    .opacity-layer2 {
+        width: 100%;
+        height: 550px;
+        background-image: linear-gradient(
+            180deg,
+            rgba(255, 4, 67, 0.418) 0%,
+            #04152dcc 79.17%
+        );
+        position: absolute;
+        bottom: 0px;
+   
+
+        left: 0px;
+    }
+
+.backgroundimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+   
+    
+    // overflow: hidden;
+    @include md{}
+   
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: to-upper-case($string: "");
+            object-position: center;
+         
+        }
+    
+}
+h1{
+    z-index: 2;
+    color: white;
+    opacity: 1;
+    padding-top: 30px;
+}
+.layer{
+    display: flex;
+justify-content: space-around;
+    
+    padding-top: 30px;
+    position: relative;
+
+   
+    flex-direction: column-reverse;
+       color: white;
+       
+
+   margin: 0 auto;
+
+   .text{
+   width: 300px;
+   font-size: 1rem;
+
+   text-align: start;
+   line-height: 2.5rem;
+   align-self: flex-start;
+   @include md{
+
+    width: 500px;
+  
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+   }
+   button{
+border: none;
+outline: none;
+text-decoration: none;
+    border-bottom: 3px solid var(--Green);
+    background: transparent;
+    color: var(--Green);
+    font-size: 1rem;
+    @include md{
+        font-size: 1.5rem; 
+    }
+  
+
+    font-weight: 600;
+    &:hover{
+        color: var(--black);
+        cursor: pointer;
+    }
+   }
+   img{
+    width: 120px;
+    @include md{
+        width: 200px;
+       }
+   }
+  
+   }
+   .imglayer{
+  
+    width: 100%;
+    height: 100%;  
+    padding-bottom: 60px;
+ 
+        img {
+            width: 300px;
+            height: 100%;
+            
+            @include md{
+                width: 500px;
+                height: 100%;
+
+            }
+
+        }
+    // width: 400px;
+   }
+   .layer2{
+    display: flex;
+    
+
+    position: relative;
+    flex-direction: column-reverse;
+       color: white;
+   }
+       
+    @include md{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+// align-self: flex-start;
+    }
+}
+
+}
